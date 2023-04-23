@@ -1,9 +1,9 @@
-package com.example.shapesapplication.generators;
+package com.example.shapesapplication.printers;
 
-import com.example.shapesapplication.printables.PrintableShape;
-import com.example.shapesapplication.utils.GeometricShapeColor;
-import com.example.shapesapplication.utils.GeometricShapeFactory;
-import com.example.shapesapplication.utils.GeometricShapeType;
+import com.example.shapesapplication.models.PrintableShape;
+import com.example.shapesapplication.models.GeometricShapeColor;
+import com.example.shapesapplication.models.GeometricShapeFactory;
+import com.example.shapesapplication.models.GeometricShapeType;
 
 import java.util.Collection;
 import java.util.Random;

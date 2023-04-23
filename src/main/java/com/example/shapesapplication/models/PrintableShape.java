@@ -1,6 +1,4 @@
-package com.example.shapesapplication.printables;
-
-import com.example.shapesapplication.shapes.GeometricShape;
+package com.example.shapesapplication.models;
 
 public class PrintableShape {
     private final GeometricShape shape;
@@ -11,12 +9,12 @@ public class PrintableShape {
         this.printed = false;
     }
 
-    public String getName() {
-        return shape.getName();
-    }
-
     public String getColor() {
         return shape.getColor();
+    }
+
+    public String getName() {
+        return shape.getName();
     }
 
     public boolean isPrinted() {

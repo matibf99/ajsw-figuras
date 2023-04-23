@@ -1,17 +1,24 @@
 package com.example.shapesapplication;
 
-import com.example.shapesapplication.shapes.*;
+import com.example.shapesapplication.models.*;
+import com.example.shapesapplication.models.GeometricShapeColor;
+import com.example.shapesapplication.models.GeometricShapeFactory;
+import com.example.shapesapplication.models.GeometricShapeType;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class OrderShapes {
-    public static void main(String... args) {
+    public static void main(String[] args) {
+        GeometricShapeFactory factory = new GeometricShapeFactory();
+        Random random = new Random();
+
         List<GeometricShape> shapes = Arrays.asList(
-                new Circle("green", 10),
-                new Rectangle("red", 1, 1),
-                new Square("blue", 2),
-                new EquilateralTriangle("orange", 100)
+                factory.createShape(GeometricShapeType.CIRCLE, GeometricShapeColor.values()[random.nextInt(GeometricShapeColor.values().length)], 100),
+                factory.createShape(GeometricShapeType.EQUILATERAL_TRIANGLE, GeometricShapeColor.values()[random.nextInt(GeometricShapeColor.values().length)], 100),
+                factory.createShape(GeometricShapeType.RECTANGLE, GeometricShapeColor.values()[random.nextInt(GeometricShapeColor.values().length)], 100),
+                factory.createShape(GeometricShapeType.SQUARE, GeometricShapeColor.values()[random.nextInt(GeometricShapeColor.values().length)], 100)
         );
 
         shapes.sort(((o1, o2) -> (int) (o1.area() - o2.area())));

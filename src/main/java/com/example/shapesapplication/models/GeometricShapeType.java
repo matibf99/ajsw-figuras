@@ -1,4 +1,4 @@
-package com.example.shapesapplication.utils;
+package com.example.shapesapplication.models;
 
 public enum GeometricShapeType {
     CIRCLE {

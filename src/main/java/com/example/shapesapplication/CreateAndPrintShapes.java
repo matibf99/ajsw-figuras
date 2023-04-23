@@ -1,16 +1,16 @@
 package com.example.shapesapplication;
 
-import com.example.shapesapplication.generators.Person;
-import com.example.shapesapplication.printables.PrintableShape;
+import com.example.shapesapplication.printers.Person;
+import com.example.shapesapplication.models.PrintableShape;
 import com.example.shapesapplication.printers.Printer;
-import com.example.shapesapplication.utils.GeometricShapeType;
+import com.example.shapesapplication.models.GeometricShapeType;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class CreateAndPrintShapes {
-    public static void main(String... args) {
+    public static void main(String[] args) {
         List<PrintableShape> shapes = Collections.synchronizedList(new ArrayList<>());
 
         final int NUM_SHAPES = Integer.MAX_VALUE;

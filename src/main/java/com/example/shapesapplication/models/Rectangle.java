@@ -1,10 +1,23 @@
-package com.example.shapesapplication.shapes;
+package com.example.shapesapplication.models;
 
-import com.example.shapesapplication.utils.GeometricShapeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class Rectangle extends GeometricShape {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
     private double width;
+
     private double height;
+
+    public Rectangle() {
+        this.name = GeometricShapeType.RECTANGLE.toString();
+    }
 
     public Rectangle(String color, double width, double height) {
         super(color);
@@ -13,16 +26,20 @@ public class Rectangle extends GeometricShape {
         this.height = height;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public double getWidth() {
         return width;
     }
 
-    public double getHeight() {
-        return height;
-    }
-
     public void setWidth(double width) {
         this.width = width;
+    }
+
+    public double getHeight() {
+        return height;
     }
 
     public void setHeight(double height) {

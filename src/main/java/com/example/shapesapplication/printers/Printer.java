@@ -1,6 +1,6 @@
 package com.example.shapesapplication.printers;
 
-import com.example.shapesapplication.printables.PrintableShape;
+import com.example.shapesapplication.models.PrintableShape;
 
 import java.util.Collection;
 import java.util.Iterator;

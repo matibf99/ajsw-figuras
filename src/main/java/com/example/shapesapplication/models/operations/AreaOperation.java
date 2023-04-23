@@ -1,6 +1,6 @@
-package com.example.shapesapplication.shapes.operations;
+package com.example.shapesapplication.models.operations;
 
-import com.example.shapesapplication.shapes.GeometricShape;
+import com.example.shapesapplication.models.GeometricShape;
 
 import java.util.List;
 
