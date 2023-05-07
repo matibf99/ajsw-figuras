@@ -1,10 +1,12 @@
 package com.example.shapesapplication.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Transient;
 
 @MappedSuperclass
 public abstract class GeometricShape implements ShapePerimeter, ShapeArea {
+    @Column
     private String color;
 
     @Transient

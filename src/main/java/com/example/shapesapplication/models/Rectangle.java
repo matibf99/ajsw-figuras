@@ -1,9 +1,6 @@
 package com.example.shapesapplication.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Rectangle extends GeometricShape {
@@ -11,8 +8,10 @@ public class Rectangle extends GeometricShape {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column
     private double width;
 
+    @Column
     private double height;
 
     public Rectangle() {
